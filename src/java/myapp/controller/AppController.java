@@ -49,7 +49,7 @@ public class AppController {
         for(Utenti ui : users){
             if(ui.getUsername().equals(u.getUsername()) && ui.getPass().equals(u.getPass())){
                 if(ui.getResponsabile().equals("no")) return "pgbenvenutout";
-                else return "redirect:/";
+                else return "pgBenvenutoAmm";
             }
         }
         return "redirect:/";
