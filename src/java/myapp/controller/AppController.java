@@ -36,6 +36,12 @@ public class AppController {
         return "login";
     }
     
+    @RequestMapping(value = {"/goRegister"}, method = RequestMethod.GET)
+    public String goRegister(ModelMap model) {
+        model.addAttribute("utente", new Utenti());
+        return "registrazione";
+    }
+    
     @RequestMapping(value = {"/checkLogin"}, method = RequestMethod.GET)
     public String checkLogin(@ModelAttribute("utente") Utenti u, ModelMap model){
         model.addAttribute("loggeduser", u);
