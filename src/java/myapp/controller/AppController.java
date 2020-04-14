@@ -64,15 +64,14 @@ public class AppController {
         return "login";
     }
     
-    @RequestMapping(value = {"/listDoAzioni"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/listDoAzioni"}, method = RequestMethod.GET)
     public String listDoAzioni(@ModelAttribute("loggeduser")Utenti u, ModelMap model){
-        List<AzioniCorrettive>azioniCorrettive = azionecorservice.findAllAzioni();
-        List<AzioniCorrettive>azioniCorrettiveUt = null;
+        List<AzioniCorrettive> azioniCorrettive = azionecorservice.findAllAzioni();
+        List<AzioniCorrettive> azioniCorrettiveUt = null;
         for(AzioniCorrettive a : azioniCorrettive){
             if(a.getTeam()== u.getTeam()) azioniCorrettiveUt.add(a);
         }
         model.addAttribute("listaAzioni", azioniCorrettiveUt);
-        
         return "azioniDaFare";
     }
     
