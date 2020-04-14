@@ -42,7 +42,7 @@ public class AppController {
         return "registrazione";
     }
     
-    @RequestMapping(value = {"/checkLogin"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/checkLogin"}, method = RequestMethod.POST)
     public String checkLogin(@ModelAttribute("utente") Utenti u, ModelMap model){
         model.addAttribute("loggeduser", u);
         List<Utenti> users = utenteservice.findAllUtenti();
