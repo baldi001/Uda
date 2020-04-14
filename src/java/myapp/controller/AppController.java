@@ -7,6 +7,7 @@
 package myapp.controller;
 
 
+import java.util.List;
 import myapp.model.Utenti;
 import myapp.service.UtentiService;
  
@@ -16,6 +17,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
  
 @Controller
@@ -32,5 +34,18 @@ public class AppController {
     public String index(ModelMap model) {
         model.addAttribute("utente", new Utenti());
         return "login";
+    }
+    
+    @RequestMapping(value = {"/checkLogin"}, method = RequestMethod.GET)
+    public String checkLogin(@ModelAttribute("utente") Utenti u, ModelMap model){
+        model.addAttribute("loggeduser", u);
+        List<Utenti> users = utenteservice.findAllUtenti();
+        for(Utenti ui : users){
+            if(ui.getUsername().equals(u.getUsername()) && ui.getPass().equals(u.getPass())){
+                if(ui.getResponsabile().equals("no")) return "benvenuto";
+                else return "redirect:/";
+            }
+        }
+        return "redirect:/";
     }
 }

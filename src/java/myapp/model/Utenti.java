@@ -40,9 +40,8 @@ public class Utenti implements Serializable{
     @Column(name="Pass")
     private String pass;
     
-    @Enumerated(EnumType.STRING)
     @Column(name="Responsabile")
-    private Enum responsabile;
+    private String responsabile;
     
     @OneToMany(cascade= CascadeType.ALL, mappedBy = "utente")
     private Set<Settori> settoriCollection;
@@ -76,7 +75,7 @@ public class Utenti implements Serializable{
         return pass;
     }
 
-    public Enum getResponsabile() {
+    public String getResponsabile() {
         return responsabile;
     }
 
@@ -112,7 +111,7 @@ public class Utenti implements Serializable{
         this.pass = pass;
     }
 
-    public void setResponsabile(Enum responsabile) {
+    public void setResponsabile(String responsabile) {
         this.responsabile = responsabile;
     }
 
