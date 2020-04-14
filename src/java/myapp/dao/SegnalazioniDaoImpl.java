@@ -11,6 +11,7 @@ import org.hibernate.Criteria;
 import org.springframework.stereotype.Repository;
  
 import myapp.model.Segnalazioni;
+import myapp.model.Team;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;

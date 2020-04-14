@@ -8,6 +8,7 @@ package myapp.service;
 import java.util.List;
 
 import myapp.model.Segnalazioni;
+import myapp.model.Team;
 /**
  *
  * @author favaron

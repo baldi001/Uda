@@ -12,6 +12,7 @@ package myapp.dao;
 import java.util.List;
  
 import myapp.model.Segnalazioni;
+import myapp.model.Team;
  
 public interface SegnalazioniDao {
     Segnalazioni findById(int id);

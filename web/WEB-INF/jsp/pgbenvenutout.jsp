@@ -17,8 +17,18 @@
         <title>Menù</title>
     </head>
     <body>
+<<<<<<< Updated upstream
         <div style="text-align: center;">
             <h1 style="margin-top: 40px;font-size: 60px;"> Benvenuto!</h1>
+=======
+        <h1> Menù Utente </h1>
+        
+        <button type="button" onclick="window.location.href='goRegister'" >INSERISCI SEGNALAZIONE</button> 
+        <br>
+        <button type="button" onclick="window.location.href='listDoAzioni'">AZIONI CORRETTIVE DA FARE</button> 
+        <br>
+        <button type="button" onclick="window.location.href=''">AZIONI CORRETTIVE DA VERIFICARE</button> 
+>>>>>>> Stashed changes
         
 
             <button style="width: 280px;height: 40px;margin-top: 85px;font-size: 15px;" type="button" onclick="window.location.href='goRegister'">Segnala un problema</button> 
