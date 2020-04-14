@@ -14,11 +14,11 @@
     <body>
         <h1> Menù Utente </h1>
         
-        <input type="Submit" value="INSERISCI SEGNALAZIONE" action=""/> 
+        <button type="button" onclick="window.location.href='goRegister'">INSERISCI SEGNALAZIONE</button> 
         <br>
-        <input type="Submit" value="AZIONI CORRETTIVE DA FARE" action=""/> 
+        <button type="button" onclick="window.location.href=''">AZIONI CORRETTIVE DA FARE</button> 
         <br>
-        <input type="Submit" value="AZIONI CORRETTIVE DA VERIFICARE" action=""/> 
+        <button type="button" onclick="window.location.href=''">AZIONI CORRETTIVE DA VERIFICARE</button> 
         
     </body>
 </html>
