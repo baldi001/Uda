@@ -22,7 +22,7 @@
             <h1 style="margin-top: 40px;font-size: 60px;"> Benvenuto!</h1>
 
         <h1> Menù Utente </h1>
-            <button style="width: 280px;height: 40px;margin-top: 85px;font-size: 15px;" type="button" onclick="window.location.href='goRegister'">Segnala un problema</button> 
+            <button style="width: 280px;height: 40px;margin-top: 85px;font-size: 15px;" type="button" onclick="window.location.href='doSegnalazione'">Segnala un problema</button> 
             <br>
             <button style="width: 280px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="window.location.href='listDoAzioni'">Lista azioni correttive da compiere</button> 
             <br>
