@@ -13,7 +13,7 @@
  
 <body>
  
-    <h2 style="text-align: center;">Effettua il login!</h2>
+    <h2 style="text-align: center; margin-top: 26px;">Effettua il login!</h2>
   
     <form:form method="GET" action="checkLogin" modelAttribute="utente" style="margin-left: 41%;">
         <table>
