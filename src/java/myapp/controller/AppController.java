@@ -57,7 +57,6 @@ public class AppController {
     
     @RequestMapping(value = {"/doRegister"}, method = RequestMethod.POST)
     public String doRegister(@ModelAttribute("utente") Utenti u, ModelMap model){
-        //model.addAttribute("loggeduser", u);
         utenteservice.saveUtente(u);
         return "login";
     }

@@ -14,29 +14,29 @@
         <title>REGISTRAZIONE</title>
     </head>
     <body>
-        <h2>Registrati qui!</h2>
-        <form:form method="POST" action="doRegister" modelAttribute="utente">
+        <h2 style="text-align: center;">Registrati qui!</h2>
+        <form:form style="margin-left: 39%;" method="POST" action="doRegister" modelAttribute="utente"> 
              <form:input type="hidden" path="responsabile" id="responsabile" value="no"/>
             <table>
-            <tr>
-                <td><label for="nome">Nome: </label> </td>
-                <td><form:input path="nome" id="nome"/></td>
+            <tr style="height: 60px;">
+                <td><label for="nome" style="font-size: 22px;">Nome: </label> </td>
+                <td><form:input style="width: 245px;height: 35px;" path="nome" id="nome"/></td>
             </tr>
-            <tr>
-                <td><label for="cognome">Cognome: </label> </td>
-                <td><form:input path="cognome"  id="cognome"/></td>
+            <tr style="height: 60px;"> 
+                <td><label for="cognome" style="font-size: 22px;">Cognome: </label> </td>
+                <td><form:input style="width: 245px;height: 35px;" path="cognome"  id="cognome"/></td>
             </tr>
-            <tr>
-                <td><label for="username">Username: </label> </td>
-                <td><form:input path="username" id="username"/></td>
+            <tr style="height: 60px;">
+                <td><label style="font-size: 22px;" for="username">Username: </label> </td>
+                <td><form:input style="width: 245px;height: 35px;" path="username" id="username"/></td>
             </tr>
-            <tr>
-                <td><label for="pass">Password: </label> </td>
-                <td><form:input path="pass" id="pass"/></td>
+            <tr style="height: 60px;"> 
+                <td><label style="font-size: 22px;" for="pass">Password: </label> </td>
+                <td><form:input style="width: 245px;height: 35px;" path="pass" id="pass"/></td>
             </tr>
-            <tr>
-                <td>
-                    <input type="submit" value="Registrati"/>
+            <tr style="text-align: center; height: 75px;">
+                <td colspan="2">
+                    <input style="width: 137px;height: 38px; font-size: 17px;" type="submit" value="Registrati"/>
                 </td>
             </tr>
         </table>

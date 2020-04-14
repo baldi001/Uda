@@ -4,21 +4,28 @@
     Author     : favaron
 --%>
 
+
+<%@page import="java.sql.ResultSet"%>
+<%@page import="com.mysql.cj.xdevapi.Statement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Pagina di benvenuto Utente</title>
+        <title>Menù</title>
     </head>
     <body>
-        <h1> Menù Utente </h1>
+        <div style="text-align: center;">
+            <h1 style="margin-top: 40px;font-size: 60px;"> Benvenuto!</h1>
         
-        <button type="button" onclick="window.location.href='goRegister'">INSERISCI SEGNALAZIONE</button> 
-        <br>
-        <button type="button" onclick="window.location.href=''">AZIONI CORRETTIVE DA FARE</button> 
-        <br>
-        <button type="button" onclick="window.location.href=''">AZIONI CORRETTIVE DA VERIFICARE</button> 
-        
+
+            <button style="width: 280px;height: 40px;margin-top: 85px;font-size: 15px;" type="button" onclick="window.location.href='goRegister'">Segnala un problema</button> 
+            <br>
+            <button style="width: 280px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="window.location.href=''">Lista azioni correttive da compiere</button> 
+            <br>
+            <button style="width: 280px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="window.location.href=''">Lista azioni correttive da verificare</button> 
+        </div>
     </body>
 </html>
