@@ -36,6 +36,6 @@
             </tr>
         </table>
     </form:form>
-    <p style="text-align: center;margin-left: 36px;"> Non sei ancora registrato? <a href="<c:url value='/goRegister' />">Registrati!</a> </p>
+    <p style="text-align: center;margin-left: 36px;"> Non sei ancora registrato? <a href="<c:url value='/goRegister' />">Registrati qui!</a> </p>
 </body>
 </html>
