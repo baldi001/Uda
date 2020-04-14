@@ -38,17 +38,14 @@ public class AppController {
         return "login";
     }
     
-<<<<<<< Updated upstream
+
     @RequestMapping(value = {"/goRegister"}, method = RequestMethod.GET)
     public String goRegister(ModelMap model) {
         model.addAttribute("utente", new Utenti());
         return "registrazione";
     }
     
-    @RequestMapping(value = {"/checkLogin"}, method = RequestMethod.POST)
-=======
     @RequestMapping(value = {"/checkLogin"}, method = RequestMethod.GET)
->>>>>>> Stashed changes
     public String checkLogin(@ModelAttribute("utente") Utenti u, ModelMap model){
         model.addAttribute("loggeduser", u);
         List<Utenti> users = utenteservice.findAllUtenti();
@@ -60,13 +57,7 @@ public class AppController {
         }
         return "redirect:/";
     }
-    @RequestMapping(value = {"/goRegister"}, method = RequestMethod.GET)
-    public String goRegister(ModelMap model) {
-        model.addAttribute("utente", new Utenti());
-        return "registrazione";
-    }
-    
-    
+ 
     @RequestMapping(value = {"/doRegister"}, method = RequestMethod.GET)
     public String doRegister(@ModelAttribute("utente") Utenti u, ModelMap model){
         utenteservice.saveUtente(u);
