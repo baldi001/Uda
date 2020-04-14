@@ -39,7 +39,7 @@ public class Settori implements Serializable{
     @ManyToOne
     private Utenti utente;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy= "Settore")
+    @OneToMany(cascade= CascadeType.ALL, mappedBy= "settore")
     private Set<Segnalazioni> segnalazioniCollection;
 
     public static long getSerialVersionUID() {

@@ -39,9 +39,9 @@ public class Team implements Serializable {
     
     @JoinColumn(name="Settore", referencedColumnName="IdSettore")
     @ManyToOne
-    private int settore;
+    private Settori settore;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy = "Team")
+    @OneToMany(cascade= CascadeType.ALL, mappedBy = "team")
     private Set<AzioniCorrettive> azioniCorrettiveCollection;
     
     @JoinTable(name="U_T", joinColumns={
@@ -66,11 +66,11 @@ public class Team implements Serializable {
         this.nomeTeam = nomeTeam;
     }
 
-    public int getSettore() {
+    public Settori getSettore() {
         return settore;
     }
 
-    public void setSettore(int settore) {
+    public void setSettore(Settori settore) {
         this.settore = settore;
     }
 

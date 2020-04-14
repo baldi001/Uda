@@ -51,7 +51,7 @@ public class Segnalazioni implements Serializable{
     @ManyToOne
     private Settori settore;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy= "Segnalazione")
+    @OneToMany(cascade= CascadeType.ALL, mappedBy= "segnalazione")
     private Set<AzioniCorrettive> azioniCorrettiveCollection;
     
     @Override

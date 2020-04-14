@@ -38,11 +38,11 @@ public class AzioniCorrettive implements Serializable {
     
     @JoinColumn(name="Segnalazione", referencedColumnName="IdSegnalazione")
     @ManyToOne
-    private int segnalazione;
+    private Segnalazioni segnalazione;
     
     @JoinColumn(name="Team", referencedColumnName="IdTeam")
     @ManyToOne
-    private int team;
+    private Team team;
 
     public int getIdAzione() {
         return idAzione;
@@ -68,19 +68,19 @@ public class AzioniCorrettive implements Serializable {
         this.data = data;
     }
     
-    public int getSegnalazione() {
+    public Segnalazioni getSegnalazione() {
         return segnalazione;
     }
 
-    public void setSegnalazione(int segnalazione) {
+    public void setSegnalazione(Segnalazioni segnalazione) {
         this.segnalazione = segnalazione;
     }
     
-    public int getTeam() {
+    public Team getTeam() {
         return team;
     }
 
-    public void setTeam(int team) {
+    public void setTeam(Team team) {
         this.team = team;
     }
     

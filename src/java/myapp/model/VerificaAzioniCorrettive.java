@@ -30,11 +30,11 @@ public class VerificaAzioniCorrettive implements Serializable {
     
     @JoinColumn(name="Utente", referencedColumnName="Username")
     @ManyToOne
-    private int utente;
+    private Utenti utente;
     
     @JoinColumn(name="AzioneCorrettiva", referencedColumnName="IdAzione")
     @ManyToOne
-    private int azioneCorrettiva;
+    private AzioniCorrettive azioneCorrettiva;
     
     public int getIdVerifica() {
         return idVerifica;
@@ -73,19 +73,19 @@ public class VerificaAzioniCorrettive implements Serializable {
         return serialVersionUID;
     }
 
-    public int getUtente() {
+    public Utenti getUtente() {
         return utente;
     }
 
-    public int getAzioneCorrettiva() {
+    public AzioniCorrettive getAzioneCorrettiva() {
         return azioneCorrettiva;
     }
 
-    public void setUtente(int utente) {
+    public void setUtente(Utenti utente) {
         this.utente = utente;
     }
 
-    public void setAzioneCorrettiva(int azioneCorrettiva) {
+    public void setAzioneCorrettiva(AzioniCorrettive azioneCorrettiva) {
         this.azioneCorrettiva = azioneCorrettiva;
     }
     

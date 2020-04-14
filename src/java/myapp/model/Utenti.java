@@ -42,15 +42,15 @@ public class Utenti implements Serializable{
     
     @Enumerated(EnumType.STRING)
     @Column(name="Responsabile")
-    private String responsabile;
+    private Enum responsabile;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy = "Utente")
+    @OneToMany(cascade= CascadeType.ALL, mappedBy = "utente")
     private Set<Settori> settoriCollection;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy= "Utente")
+    @OneToMany(cascade= CascadeType.ALL, mappedBy= "utente")
     private Set<Segnalazioni> segnalazioniCollection;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy= "Utente")
+    @OneToMany(cascade= CascadeType.ALL, mappedBy= "utente")
     private Set<VerificaAzioniCorrettive> verificaAzioniCorrettiveCollection;
     
     @ManyToMany(mappedBy="utenti")
@@ -76,7 +76,7 @@ public class Utenti implements Serializable{
         return pass;
     }
 
-    public String getResponsabile() {
+    public Enum getResponsabile() {
         return responsabile;
     }
 
@@ -112,7 +112,7 @@ public class Utenti implements Serializable{
         this.pass = pass;
     }
 
-    public void setResponsabile(String responsabile) {
+    public void setResponsabile(Enum responsabile) {
         this.responsabile = responsabile;
     }
 
