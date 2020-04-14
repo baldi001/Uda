@@ -17,6 +17,6 @@
         <button type="button" onclick="window.location.href=''">VISUALIZZA SEGNALAZIONI </button>
         <br>
         <button type="button" onclick="window.location.href=''">FAI VERIFICARE </button>
-        <br
+        <br>
     </body>
 </html>
