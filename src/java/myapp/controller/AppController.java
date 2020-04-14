@@ -48,7 +48,7 @@ public class AppController {
         List<Utenti> users = utenteservice.findAllUtenti();
         for(Utenti ui : users){
             if(ui.getUsername().equals(u.getUsername()) && ui.getPass().equals(u.getPass())){
-                if(ui.getResponsabile().equals("no")) return "benvenuto";
+                if(ui.getResponsabile().equals("no")) return "pgbenvenutout";
                 else return "redirect:/";
             }
         }
