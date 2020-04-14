@@ -15,7 +15,7 @@
  
     <h2 style="text-align: center; margin-top: 26px;">Effettua il login!</h2>
   
-    <form:form method="POST" action="checkLogin" modelAttribute="utente" style="margin-left: 41%;">
+    <form:form method="GET" action="checkLogin" modelAttribute="utente" style="margin-left: 41%;">
         <table>
             <tr>
                 <td><label style="font-size: 22px;" for="username">Username: </label> </td>

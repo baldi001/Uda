@@ -15,7 +15,7 @@
     </head>
     <body>
         <h2 style="text-align: center;">Registrati qui!</h2>
-        <form:form style="margin-left: 39%;" method="POST" action="doRegister" modelAttribute="utente"> 
+        <form:form style="margin-left: 39%;" method="GET" action="doRegister" modelAttribute="utente"> 
              <form:input type="hidden" path="responsabile" id="responsabile" value="no"/>
             <table>
             <tr style="height: 60px;">

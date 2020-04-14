@@ -50,7 +50,7 @@ public class AzioniCorrettiveDaoImpl implements AzioniCorrettiveDao {
     @SuppressWarnings("unchecked")
     public List<AzioniCorrettive> findAllAzioni() {
         Criteria criteria = getSession().createCriteria(AzioniCorrettive.class);
-        return (List<AzioniCorrettive>) criteria.list();
+        return (List<AzioniCorrettive>)criteria.list();
     }
     
 }
