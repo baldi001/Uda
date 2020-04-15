@@ -10,6 +10,7 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -41,13 +42,13 @@ public class Team implements Serializable {
     @ManyToOne
     private Settori settore;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy = "team")
+    @OneToMany(fetch= FetchType.EAGER,cascade= CascadeType.ALL, mappedBy = "team")
     private Set<AzioniCorrettive> azioniCorrettiveCollection;
     
     @JoinTable(name="U_T", joinColumns={
         @JoinColumn(name = "Team", referencedColumnName = "IdTeam")}, inverseJoinColumns = {
         @JoinColumn(name = "Utente", referencedColumnName = "Username")})
-    @ManyToMany
+    @ManyToMany (fetch= FetchType.EAGER)
     private Set<Utenti> utenti;
     
     public int getIdTeam() {

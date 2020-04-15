@@ -8,6 +8,7 @@ package myapp.model;
 import java.io.Serializable;
 import java.util.logging.Logger;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -29,11 +30,11 @@ public class VerificaAzioniCorrettive implements Serializable {
     private int idVerifica;
     
     @JoinColumn(name="Utente", referencedColumnName="Username")
-    @ManyToOne
+    @ManyToOne 
     private Utenti utente;
     
     @JoinColumn(name="AzioneCorrettiva", referencedColumnName="IdAzione")
-    @ManyToOne
+    @ManyToOne 
     private AzioniCorrettive azioneCorrettiva;
     
     public int getIdVerifica() {

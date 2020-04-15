@@ -6,6 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Set;
 import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
@@ -36,10 +37,10 @@ public class Settori implements Serializable{
     private String nome;
        
     @JoinColumn(name="Utente",referencedColumnName="Username")
-    @ManyToOne
+    @ManyToOne 
     private Utenti utente;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy= "settore")
+    @OneToMany(fetch= FetchType.EAGER,cascade= CascadeType.ALL, mappedBy= "settore")
     private Set<Segnalazioni> segnalazioniCollection;
 
     public static long getSerialVersionUID() {

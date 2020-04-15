@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Set;
 import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
@@ -44,14 +45,14 @@ public class Segnalazioni implements Serializable{
     private String descrizione;
     
     @JoinColumn(name="Utente",referencedColumnName="Username")
-    @ManyToOne
+    @ManyToOne 
     private Utenti utente;
     
     @JoinColumn(name="Settore",referencedColumnName="IdSettore")
-    @ManyToOne
+    @ManyToOne 
     private Settori settore;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy= "segnalazione")
+    @OneToMany(fetch= FetchType.EAGER, cascade= CascadeType.ALL, mappedBy= "segnalazione")
     private Set<AzioniCorrettive> azioniCorrettiveCollection;
     
     @Override

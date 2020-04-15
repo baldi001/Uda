@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.ManyToMany;
@@ -43,16 +44,16 @@ public class Utenti implements Serializable{
     @Column(name="Responsabile")
     private String responsabile;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy = "utente")
+    @OneToMany(fetch = FetchType.EAGER,cascade= CascadeType.ALL, mappedBy = "utente")
     private Set<Settori> settoriCollection;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy= "utente")
+    @OneToMany(fetch= FetchType.EAGER,cascade= CascadeType.ALL, mappedBy= "utente")
     private Set<Segnalazioni> segnalazioniCollection;
     
-    @OneToMany(cascade= CascadeType.ALL, mappedBy= "utente")
+    @OneToMany(fetch= FetchType.EAGER,cascade= CascadeType.ALL, mappedBy= "utente")
     private Set<VerificaAzioniCorrettive> verificaAzioniCorrettiveCollection;
     
-    @ManyToMany(mappedBy="utenti")
+    @ManyToMany(fetch= FetchType.EAGER,mappedBy="utenti")
     private Set<Team> team;
 
     public static long getSerialVersionUID() {

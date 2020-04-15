@@ -74,7 +74,7 @@ public class AppController {
         for(AzioniCorrettive a : azioniCorrettive){
             if(a.getTeam()== u.getTeam()) azioniCorrettiveUt.add(a);
         }
-        model.addAttribute("listaAzioni", azioniCorrettiveUt);
+        model.addAttribute("listaAzioni", azioniCorrettive);
         return "azioniDaFare";
     }
     
