@@ -27,6 +27,8 @@
             <button style="width: 280px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="window.location.href='listDoAzioni'">Lista azioni correttive da compiere</button> 
             <br>
             <button style="width: 280px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="window.location.href='listVerificaAzioni'">Lista azioni correttive da verificare</button> 
+            <br>
+            <button style="width: 280px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="window.location.href='/Uda/'">Logout</button>
         </div>
     </body>
 </html>
