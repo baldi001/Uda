@@ -31,6 +31,7 @@
                         <td>${a.team.getNomeTeam()}</td>
 		</tr>
 	</c:forEach>
-	</table>
+    </table>
+    <button style="width: 150px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="javascript:history.back()">Torna al menù</button>
 </body>
 </html>

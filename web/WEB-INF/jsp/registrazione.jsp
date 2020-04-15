@@ -35,10 +35,12 @@
             </tr>
             <tr style="text-align: center; height: 75px;">
                 <td colspan="2">
+                    <button style="width: 150px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="javascript:history.back()">Torna al Login</button>
                     <input style="width: 137px;height: 38px; font-size: 17px;" type="submit" value="Registrati"/>
                 </td>
             </tr>
         </table>
         </form:form>
+       
     </body>
 </html>
