@@ -114,11 +114,10 @@ public class AppController {
         Set<Settori> sett = loggeduser.getSettoriCollection();
         for(Segnalazioni x : listaSeg){
             for(Settori s:sett){
-                if(s.getIdSettore()==x.getSettore().getIdSettore()) daVisualizzare.add(x);
+                if(s.getIdSettore()== x.getSettore().getIdSettore()) daVisualizzare.add(x);
             }
         }
-        Set<Segnalazioni> s = new LinkedHashSet<Segnalazioni>(daVisualizzare);  
-        model.addAttribute("listaSegnalazioni", s);
+        model.addAttribute("listaSegnalazioni", daVisualizzare);
         return "VisualizzaSegnalazioni";
     }
     
@@ -133,6 +132,16 @@ public class AppController {
     @RequestMapping(value = {"/removeAzioneCorrettiva/{idVerifica}"})
     public String Remove(@PathVariable("idVerifica") int id){
         this.verazionecorservice.deleteVerificaAzioneCorrettiva(id);
+        VerificaAzioniCorrettive a= this.verazionecorservice.findById(id);
+        List<AzioniCorrettive> azioniCorrettive = azionecorservice.findAllAzioni();
+        List<Segnalazioni> segnalazioni = segnalazioneservice.findAllSegnalazioni();
+        for(AzioniCorrettive az : azioniCorrettive){
+            if(az.getIdAzione() == a.getAzioneCorrettiva().getIdAzione()){
+                for(Segnalazioni s : segnalazioni){
+                    if(az.getSegnalazione().getIdSegnalazione()== s.getIdSegnalazione()) segnalazioneservice.deleteSegnalazione(s.getIdSegnalazione());
+                }
+            }
+        }
         return "redirect:/checkLogin2";
     }
        
