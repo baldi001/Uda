@@ -54,7 +54,7 @@ public class AppController {
         return "registrazione";
     }
     
-    @RequestMapping(value = {"/checkLogin"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/checkLogin"}, method = RequestMethod.GET)
     public String checkLogin(@ModelAttribute("utente") Utenti u, ModelMap model){
         model.addAttribute("loggeduser", u);
         List<Utenti> users = utenteservice.findAllUtenti();
@@ -67,13 +67,13 @@ public class AppController {
         return "redirect:/";
     }
  
-    @RequestMapping(value = {"/doRegister"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/doRegister"}, method = RequestMethod.GET)
     public String doRegister(@ModelAttribute("utente") Utenti u, ModelMap model){
         utenteservice.saveUtente(u);
         return "login";
     }
     
-    @RequestMapping(value = {"/listDoAzioni"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/listDoAzioni"}, method = RequestMethod.GET)
     public String listDoAzioni(@ModelAttribute("loggeduser")Utenti u, ModelMap model){
         List<AzioniCorrettive> azioniCorrettive = azionecorservice.findAllAzioni();
         List<AzioniCorrettive> azioniCorrettiveUt = null;
@@ -84,7 +84,7 @@ public class AppController {
         return "azioniDaFare";
     }
     
-    @RequestMapping(value = {"/listVerificaAzioni"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/listVerificaAzioni"}, method = RequestMethod.GET)
     public String listVerificaAzioni(@ModelAttribute("loggeduser")Utenti u, ModelMap model){
         List<VerificaAzioniCorrettive> verificaAzioniCorrettive = verazionecorservice.findAllVerificaAzioniCorrettive();
         List<VerificaAzioniCorrettive> verificaAzioniCorrettiveUt = null;
