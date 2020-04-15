@@ -30,11 +30,11 @@ public class VerificaAzioniCorrettive implements Serializable {
     private int idVerifica;
     
     @JoinColumn(name="Utente", referencedColumnName="Username")
-    @ManyToOne(fetch=FetchType.LAZY) 
+    @ManyToOne 
     private Utenti utente;
     
     @JoinColumn(name="AzioneCorrettiva", referencedColumnName="IdAzione")
-    @ManyToOne(fetch=FetchType.LAZY)  
+    @ManyToOne
     private AzioniCorrettive azioneCorrettiva;
     
     public int getIdVerifica() {

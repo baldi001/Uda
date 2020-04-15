@@ -131,17 +131,8 @@ public class AppController {
     
     @RequestMapping(value = {"/removeAzioneCorrettiva/{idVerifica}"})
     public String Remove(@PathVariable("idVerifica") int id){
+        VerificaAzioniCorrettive a = verazionecorservice.findById(id);
         this.verazionecorservice.deleteVerificaAzioneCorrettiva(id);
-        VerificaAzioniCorrettive a= this.verazionecorservice.findById(id);
-        List<AzioniCorrettive> azioniCorrettive = azionecorservice.findAllAzioni();
-        List<Segnalazioni> segnalazioni = segnalazioneservice.findAllSegnalazioni();
-        for(AzioniCorrettive az : azioniCorrettive){
-            if(az.getIdAzione() == a.getAzioneCorrettiva().getIdAzione()){
-                for(Segnalazioni s : segnalazioni){
-                    if(az.getSegnalazione().getIdSegnalazione()== s.getIdSegnalazione()) segnalazioneservice.deleteSegnalazione(s.getIdSegnalazione());
-                }
-            }
-        }
         return "redirect:/checkLogin2";
     }
        

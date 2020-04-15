@@ -52,7 +52,7 @@ public class Segnalazioni implements Serializable{
     @ManyToOne 
     private Settori settore;
     
-    @OneToMany(fetch= FetchType.EAGER, cascade= CascadeType.ALL, mappedBy= "segnalazione")
+    @OneToMany(fetch= FetchType.EAGER,orphanRemoval=true, cascade= CascadeType.ALL, mappedBy= "segnalazione")
     private Set<AzioniCorrettive> azioniCorrettiveCollection;
     
     @Override

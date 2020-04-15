@@ -42,7 +42,7 @@ public class AzioniCorrettive implements Serializable {
     private Segnalazioni segnalazione;
     
     @JoinColumn(name="Team", referencedColumnName="IdTeam")
-    @ManyToOne 
+    @ManyToOne  
     private Team team;
 
     public int getIdAzione() {
