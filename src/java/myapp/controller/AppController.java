@@ -11,9 +11,11 @@ import java.util.List;
 import myapp.model.AzioniCorrettive;
 import myapp.model.Utenti;
 import myapp.model.Segnalazioni;
+import myapp.model.VerificaAzioniCorrettive;
 import myapp.service.AzioniCorrettiveService;
 import myapp.service.UtentiService;
 import myapp.service.SegnalazioniService;
+import myapp.service.VerificaAzioniCorrettiveService;
  
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,8 +34,12 @@ public class AppController {
     
     @Autowired
     UtentiService utenteservice;
+    @Autowired
     AzioniCorrettiveService azionecorservice;
+    @Autowired
     SegnalazioniService segnalazioneservice;
+    @Autowired
+    VerificaAzioniCorrettiveService verazionecorservice;
 
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public String index(ModelMap model) {
@@ -75,6 +81,17 @@ public class AppController {
             if(a.getTeam()== u.getTeam()) azioniCorrettiveUt.add(a);
         }
         model.addAttribute("listaAzioni", azioniCorrettive);
+        return "azioniDaFare";
+    }
+    
+    @RequestMapping(value = {"/listVerificaAzioni"}, method = RequestMethod.POST)
+    public String listVerificaAzioni(@ModelAttribute("loggeduser")Utenti u, ModelMap model){
+        List<VerificaAzioniCorrettive> verificaAzioniCorrettive = verazionecorservice.findAllVerificaAzioniCorrettive();
+        List<VerificaAzioniCorrettive> verificaAzioniCorrettiveUt = null;
+        for(VerificaAzioniCorrettive a : verificaAzioniCorrettive){
+            if(a.getUtente().equals(u)) verificaAzioniCorrettiveUt.add(a);
+        }
+        model.addAttribute("listaVerificaAzioni", verificaAzioniCorrettive);
         return "azioniDaFare";
     }
     
