@@ -14,7 +14,7 @@
     <body>
         <h2>Inserisci qui la tua segnalazione!</h2>
         <table>
-            <form:form style="margin-left: 39%;" method="GET" action="doRSegnalazione" modelAttribute="segnalazione"> 
+            <form:form style="margin-left: 39%;" method="GET" action="doSegnalazione" modelAttribute="segnalazione"> 
              <form:input type="hidden" path="idSegnalazione" id="idSegnalazione" value=""/>
             <tr style="height: 60px;">
                 <td><label for="data" style="font-size: 22px;">Data: </label> </td>
