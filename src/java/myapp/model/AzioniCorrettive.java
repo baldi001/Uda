@@ -27,9 +27,8 @@ public class AzioniCorrettive implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="IdAzione")
-    private int idAzione;
+    private String idAzione;
     
     @Column(name="Costo")
     private double costo;
@@ -45,11 +44,11 @@ public class AzioniCorrettive implements Serializable {
     @ManyToOne  
     private Team team;
 
-    public int getIdAzione() {
+    public String getIdAzione() {
         return idAzione;
     }
 
-    public void setIdAzione(int idAzione) {
+    public void setIdAzione(String idAzione) {
         this.idAzione = idAzione;
     }
     
@@ -85,12 +84,6 @@ public class AzioniCorrettive implements Serializable {
         this.team = team;
     }
     
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (int) idAzione;
-        return hash;
-    }
 
     @Override
     public boolean equals(Object object) {

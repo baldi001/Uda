@@ -31,12 +31,11 @@ public class Segnalazioni implements Serializable{
     
     private static final long serialVersionUID= 1L;
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="IdSegnalazione")
-    private int idSegnalazione;
+    private String idSegnalazione;
     
     @Column(name="Data")
-    private Date data;
+    private String data;
     
     @Column(name="Tipo")
     private String tipo;
@@ -52,7 +51,7 @@ public class Segnalazioni implements Serializable{
     @ManyToOne 
     private Settori settore;
     
-    @OneToMany(fetch= FetchType.EAGER,orphanRemoval=true, cascade= CascadeType.ALL, mappedBy= "segnalazione")
+    @OneToMany(fetch= FetchType.EAGER, cascade= CascadeType.ALL, mappedBy= "segnalazione")
     private Set<AzioniCorrettive> azioniCorrettiveCollection;
     
     @Override
@@ -60,11 +59,11 @@ public class Segnalazioni implements Serializable{
         return "Segnalazioni{" + "idSegnalazione=" + idSegnalazione + ", data=" + data + ", tipo=" + tipo + ", descrizione=" + descrizione + ", utente=" + utente + ", settore=" + settore + ", azioniCorrettiveCollection=" + azioniCorrettiveCollection + '}';
     }
 
-    public void setIdSegnalazione(int idSegnalazione) {
+    public void setIdSegnalazione(String idSegnalazione) {
         this.idSegnalazione = idSegnalazione;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
@@ -92,11 +91,11 @@ public class Segnalazioni implements Serializable{
         return serialVersionUID;
     }
 
-    public int getIdSegnalazione() {
+    public String getIdSegnalazione() {
         return idSegnalazione;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 

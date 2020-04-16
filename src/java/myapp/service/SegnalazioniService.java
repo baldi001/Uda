@@ -14,9 +14,9 @@ import myapp.model.Team;
  * @author favaron
  */
 public interface SegnalazioniService {
-    Segnalazioni findById(int id);
+    Segnalazioni findById(String id);
     void saveSegnalazione(Segnalazioni segnalazione);
     void updateSegnalazione(Segnalazioni segnalazione);
-    void deleteSegnalazione(int idSegnalazione);
+    void deleteSegnalazione(String idSegnalazione);
     List<Segnalazioni> findAllSegnalazioni();
 }

@@ -15,8 +15,8 @@ import myapp.model.Segnalazioni;
 import myapp.model.Team;
  
 public interface SegnalazioniDao {
-    Segnalazioni findById(int id);
+    Segnalazioni findById(String id);
     void saveSegnalazione(Segnalazioni s);
-    void deleteSegnalazione(int id);
+    void deleteSegnalazione(String id);
     List<Segnalazioni> findAllSegnalazioni();
  }

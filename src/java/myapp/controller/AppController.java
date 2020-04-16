@@ -131,11 +131,16 @@ public class AppController {
     
     @RequestMapping(value = {"/removeAzioneCorrettiva/{idVerifica}"})
     public String Remove(@PathVariable("idVerifica") int id){
-        VerificaAzioniCorrettive a = verazionecorservice.findById(id);
         this.verazionecorservice.deleteVerificaAzioneCorrettiva(id);
         return "redirect:/checkLogin2";
     }
-       
+    
+    @RequestMapping(value = {"/goSegnalazione"}, method = RequestMethod.GET)
+    public String goSegnalazione(ModelMap model){
+        model.addAttribute("segnalazione",new Segnalazioni());
+        return "CreaSegnalazione";
+    }
+    
     @RequestMapping(value = {"/doSegnalazione"}, method = RequestMethod.GET)
     public String doSegnalazione(@ModelAttribute("segnalazione") Segnalazioni s , ModelMap model){
         segnalazioneservice.saveSegnalazione(s);
