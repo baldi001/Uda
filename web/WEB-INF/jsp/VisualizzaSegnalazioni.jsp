@@ -23,11 +23,12 @@
     <h2 style="text-align: center; margin-top: 40px;font-size: 50px;">Lista Segnalazioni</h2>  
     <table style="text-align: center;margin-left: 25.2%;width: 50%;border: 1px solid black;"> 
         <tr style="height:30px; background-color:#ececec ">
-            <th style="width:20%;">IdSegnalazione</th>
-            <th style="width:20%;">Data</th>
-            <th style="width:20%;">Tipo</th>
-            <th style="width:20%;">Descrizione</th>
-            <th style="width:20%;">Utente</th>
+            <th style="width:16.6%;">IdSegnalazione</th>
+            <th style="width:16.6%;">Data</th>
+            <th style="width:16.6%;">Tipo</th>
+            <th style="width:16.6%;">Descrizione</th>
+            <th style="width:16.6%;">Utente</th>
+            <th style="width:16.6%;"></th>
 	</tr>
 	<c:forEach items="${listaSegnalazioni}" var="a">
 		<tr style="height:40px;">
