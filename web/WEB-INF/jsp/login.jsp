@@ -6,36 +6,50 @@
 <html>
  
 <head>
+    <style type="text/css">
+        #pass:hover{
+            background-color: #ececec;
+        }
+        
+        #username:hover{
+            background-color: #ececec;
+        }
+        
+        #bottone:hover{
+            background-color: #ececec;
+        }
+        
+    </style>
         <title>LOGIN</title>
  
  
 </head>
  
-<body>
- 
-    <h2 style="text-align: center; margin-top: 26px;">Effettua il login!</h2>
+<body style="background-color: #a0dbff;">
+
+    <h2 style="text-align: center; margin-top: 26px;font-size: 50px;">Effettua il login!</h2>
   
-    <form:form method="GET" action="checkLogin" modelAttribute="utente" style="margin-left: 41%;">
+    <form:form method="GET" action="checkLogin" modelAttribute="utente" style="margin-left: 39%;">
         <table>
             <tr>
                 <td><label style="font-size: 22px;" for="username">Username: </label> </td>
-                <td><form:input style="width: 245px;height: 35px;" type="name" path="username" id="username"/></td>
+                <td style="padding-left: 20px;"><form:input style="padding-left:12px; width: 245px;height: 35px;border-radius: 10px;border: 1px solid #bdbdbd;" type="name" path="username" id="username"/></td>
             </tr>
          
      
-            <tr style="height: 60px;">
+            <tr style="height: 60px; text-align: end;">
                 <td><label style="font-size: 22px;" for="password">Password: </label> </td>
-                <td><form:input style="width: 245px;height: 35px;" type="password" path="pass" id="pass"/></td>
+                <td><form:input style="padding-left:12px; width: 245px;height: 35px;border-radius: 10px;border: 1px solid #bdbdbd;" type="password" path="pass" id="pass"/></td>
             </tr>
      
      
-            <tr style="text-align: center; height: 75px;">
+            <tr style="text-align: center; height: 110px;">
                 <td colspan="2">
-                            <input style="width: 137px;height: 38px; font-size: 17px;" type="submit" value="Accedi"/>
+                            <input id="bottone" style="width: 137px;height: 38px; font-size: 17px;border-radius: 25px; border: 1px solid #7b7b7b;" type="submit" value="Accedi"/>
                 </td>
             </tr>
         </table>
     </form:form>
-    <p style="text-align: center;margin-left: 36px;"> Non sei ancora registrato? <a href="<c:url value='/goRegister' />">Registrati qui!</a> </p>
+    <p style="text-align: center;margin-left: 36px;margin-right: 21px;"> Non sei ancora registrato? <a href="<c:url value='/goRegister' />">Registrati qui!</a> </p>
 </body>
 </html>

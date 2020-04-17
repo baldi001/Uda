@@ -3,21 +3,34 @@
 <html>
 <head>
     <title>Lista AzioniCorrettive Utente</title>
+    <style type="text/css">
+    table {
+        border-collapse: collapse;
+        background-color: white; 
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+    #bottone:hover{
+            background-color: #ececec;
+    }     
+    </style>
 </head>
  
  
-<body>
-    <h2>Lista Segnalazioni</h2>  
-    <table>
-        <tr>
-            <th width="120">IdSegnalazione</th>
-            <th width="80">Data</th>
-            <th width="60">Tipo</th>
-            <th width="60">Descrizione</th>
-            <th width="60">Utente</th>
+<body style="background-color: #a0dbff;">
+    <h2 style="text-align: center; margin-top: 40px;font-size: 50px;">Lista Segnalazioni</h2>  
+    <table style="text-align: center;margin-left: 25.2%;width: 50%;border: 1px solid black;"> 
+        <tr style="height:30px; background-color:#ececec ">
+            <th style="width:20%;">IdSegnalazione</th>
+            <th style="width:20%;">Data</th>
+            <th style="width:20%;">Tipo</th>
+            <th style="width:20%;">Descrizione</th>
+            <th style="width:20%;">Utente</th>
 	</tr>
 	<c:forEach items="${listaSegnalazioni}" var="a">
-		<tr>
+		<tr style="height:40px;">
 			<td>${a.idSegnalazione}</td>
 			<td>${a.data}</td>
 			<td>${a.tipo}</td>
@@ -27,6 +40,6 @@
 		</tr>
 	</c:forEach>
     </table>
-    <button style="width: 150px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="javascript:history.back()">Torna al menù</button>
+    <button id="bottone" style="width: 150px;height: 40px;margin-top: 65px;font-size: 15px;text-align: center;margin-left: 46%;font-size: 17px;border-radius: 30px;border: 1px solid #7b7b7b;" type="button" onclick="javascript:history.back()">Torna al menù</button>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package myapp.model;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -36,7 +37,7 @@ public class Segnalazioni implements Serializable{
     private int idSegnalazione;
     
     @Column(name="Data")
-    private Date data;
+    private String data;
     
     @Column(name="Tipo")
     private String tipo;
@@ -64,7 +65,7 @@ public class Segnalazioni implements Serializable{
         this.idSegnalazione = idSegnalazione;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 
@@ -96,7 +97,7 @@ public class Segnalazioni implements Serializable{
         return idSegnalazione;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 

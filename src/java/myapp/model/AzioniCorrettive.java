@@ -35,7 +35,7 @@ public class AzioniCorrettive implements Serializable {
     private double costo;
     
     @Column(name="Data")
-    private Date data;
+    private String data;
     
     @JoinColumn(name="Segnalazione", referencedColumnName="IdSegnalazione")
     @ManyToOne 
@@ -61,11 +61,11 @@ public class AzioniCorrettive implements Serializable {
         this.costo = costo;
     }
     
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date costo) {
+    public void setData(String data) {
         this.data = data;
     }
     
