@@ -21,12 +21,12 @@
                 background-color: #ececec;
         }     
     </style>
-    <title>Lista AzioniCorrettive Utente</title>
+    <title>Lista Azioni Correttive Utente</title>
 </head>
  
  
 <body style="background-color: #a0dbff;">
-    <h2 style="text-align: center; margin-top: 40px;font-size: 50px;">Azioni da fare</h2>  
+    <h2 style="text-align: center; margin-top: 40px;font-size: 50px;">Azioni da eseguire</h2>  
     <table style="text-align: center;margin-left: 25.2%;width: 50%;border: 1px solid black;">
         <tr style="height:30px; background-color:#ececec ">
             <th style="width:25%;">IdAzione</th>

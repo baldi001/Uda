@@ -20,7 +20,7 @@
  
  
 <body style="background-color: #a0dbff;">
-    <h2 style="text-align: center; margin-top: 40px;font-size: 50px;">Lista AzioniCorrettive</h2>  
+    <h2 style="text-align: center; margin-top: 40px;font-size: 50px;">Lista Azioni Correttive</h2>  
     <table style="text-align: center;margin-left: 25.2%;width: 50%;border: 1px solid black;"> 
         <tr style="height:30px; background-color:#ececec ">
             <th style="width:16.6%;">IdAzione</th>
