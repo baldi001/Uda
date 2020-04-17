@@ -31,11 +31,12 @@ public class Segnalazioni implements Serializable{
     
     private static final long serialVersionUID= 1L;
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="IdSegnalazione")
-    private String idSegnalazione;
+    private int idSegnalazione;
     
     @Column(name="Data")
-    private String data;
+    private Date data;
     
     @Column(name="Tipo")
     private String tipo;
@@ -59,11 +60,11 @@ public class Segnalazioni implements Serializable{
         return "Segnalazioni{" + "idSegnalazione=" + idSegnalazione + ", data=" + data + ", tipo=" + tipo + ", descrizione=" + descrizione + ", utente=" + utente + ", settore=" + settore + ", azioniCorrettiveCollection=" + azioniCorrettiveCollection + '}';
     }
 
-    public void setIdSegnalazione(String idSegnalazione) {
+    public void setIdSegnalazione(int idSegnalazione) {
         this.idSegnalazione = idSegnalazione;
     }
 
-    public void setData(String data) {
+    public void setData(Date data) {
         this.data = data;
     }
 
@@ -91,11 +92,11 @@ public class Segnalazioni implements Serializable{
         return serialVersionUID;
     }
 
-    public String getIdSegnalazione() {
+    public int getIdSegnalazione() {
         return idSegnalazione;
     }
 
-    public String getData() {
+    public Date getData() {
         return data;
     }
 

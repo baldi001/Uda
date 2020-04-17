@@ -27,8 +27,9 @@ public class AzioniCorrettive implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="IdAzione")
-    private String idAzione;
+    private int idAzione;
     
     @Column(name="Costo")
     private double costo;
@@ -44,11 +45,11 @@ public class AzioniCorrettive implements Serializable {
     @ManyToOne  
     private Team team;
 
-    public String getIdAzione() {
+    public int getIdAzione() {
         return idAzione;
     }
 
-    public void setIdAzione(String idAzione) {
+    public void setIdAzione(int idAzione) {
         this.idAzione = idAzione;
     }
     

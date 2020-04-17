@@ -27,7 +27,7 @@ public class SegnalazioniServiceImpl implements SegnalazioniService{
     private SegnalazioniDao dao;
     
     @Override
-    public Segnalazioni findById(String id) {
+    public Segnalazioni findById(int id) {
         return dao.findById(id);
     }
 
@@ -50,7 +50,7 @@ public class SegnalazioniServiceImpl implements SegnalazioniService{
     }
 
     @Override
-    public void deleteSegnalazione(String idSegnalazione) {
+    public void deleteSegnalazione(int idSegnalazione) {
             dao.deleteSegnalazione(idSegnalazione);
     }
 

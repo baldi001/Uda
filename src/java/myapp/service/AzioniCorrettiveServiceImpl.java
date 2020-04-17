@@ -27,7 +27,7 @@ public class AzioniCorrettiveServiceImpl implements AzioniCorrettiveService {
     private AzioniCorrettiveDao dao;
      
     @Override
-    public AzioniCorrettive findById(String idAzione) {
+    public AzioniCorrettive findById(int idAzione) {
         return dao.findById(idAzione);
     }
  
@@ -48,7 +48,7 @@ public class AzioniCorrettiveServiceImpl implements AzioniCorrettiveService {
     }
  
     @Override
-    public void deleteAzioneCorrettiva(String idAzione) {
+    public void deleteAzioneCorrettiva(int idAzione) {
         dao.deleteAzioneCorrettiva(idAzione);
     }
      
