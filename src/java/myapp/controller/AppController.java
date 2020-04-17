@@ -146,4 +146,15 @@ public class AppController {
         segnalazioneservice.saveSegnalazione(s);
         return "pgbenvenutout";
     }
+    
+    @RequestMapping(value = {"/verificaAzione1"}, method = RequestMethod.GET)
+    public String verificaAzione(ModelMap model){
+        model.addAttribute("azionedaveri",new VerificaAzioniCorrettive());
+        return "FaiVerificare";
+    }
+    @RequestMapping(value = {"/verificaAzione2"}, method = RequestMethod.GET)
+    public String verificaAzione2(@ModelAttribute("azionedaveri") VerificaAzioniCorrettive a , ModelMap model){
+        verazionecorservice.saveVerificaAzioneCorrettiva(a);
+        return "pgBenvenutoAmm";
+    }
 }

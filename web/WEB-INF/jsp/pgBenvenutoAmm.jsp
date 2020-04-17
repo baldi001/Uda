@@ -16,7 +16,7 @@
             <h1 style="margin-top: 40px;font-size: 60px;"> Benvenuto!</h1>
             <button style="width: 280px;height: 40px;margin-top: 85px;font-size: 15px;" type="button" onclick="window.location.href='listSegnalazioni'">Visualizza segnalazioni</button> 
             <br>
-            <button style="width: 280px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="window.location.href=''">Fai verificare azione correttiva</button> 
+            <button style="width: 280px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="window.location.href='verificaAzione1'">Fai verificare azione correttiva</button> 
             <br>
             <button style="width: 280px;height: 40px;margin-top: 20px;font-size: 15px;" type="button" onclick="window.location.href='/Uda/'">Logout</button>
         </div>

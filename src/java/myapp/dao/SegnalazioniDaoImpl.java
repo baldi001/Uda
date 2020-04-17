@@ -32,7 +32,7 @@ public class SegnalazioniDaoImpl implements SegnalazioniDao {
     }
     
     @Override
-    public Segnalazioni findById(String id) {
+    public Segnalazioni findById(int id) {
         return (Segnalazioni) getSession().get(Segnalazioni.class, id);
     }
 
@@ -42,7 +42,7 @@ public class SegnalazioniDaoImpl implements SegnalazioniDao {
     }
 
     @Override
-    public void deleteSegnalazione(String id) {
+    public void deleteSegnalazione(int id) {
         Segnalazioni s = (Segnalazioni) getSession().load(Segnalazioni.class, id);
 	if(s!=null) getSession().delete(s);
     }

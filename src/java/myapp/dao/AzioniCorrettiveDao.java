@@ -13,8 +13,8 @@ import java.util.List;
 import myapp.model.AzioniCorrettive;
 
 public interface AzioniCorrettiveDao {
-    AzioniCorrettive findById(String id);
+    AzioniCorrettive findById(int id);
     void saveAzioneCorrettiva(AzioniCorrettive a);
-    void deleteAzioneCorrettiva(String id);
+    void deleteAzioneCorrettiva(int id);
     List<AzioniCorrettive> findAllAzioni();
  }

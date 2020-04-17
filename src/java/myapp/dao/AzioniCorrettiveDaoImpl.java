@@ -31,7 +31,7 @@ public class AzioniCorrettiveDaoImpl implements AzioniCorrettiveDao {
     }
     
     @Override
-    public AzioniCorrettive findById(String id) {
+    public AzioniCorrettive findById(int id) {
         return (AzioniCorrettive) getSession().get(AzioniCorrettive.class, id);
     }
 
@@ -41,7 +41,7 @@ public class AzioniCorrettiveDaoImpl implements AzioniCorrettiveDao {
     }
 
     @Override
-    public void deleteAzioneCorrettiva(String id) {
+    public void deleteAzioneCorrettiva(int id) {
         AzioniCorrettive a = (AzioniCorrettive) getSession().load(AzioniCorrettive.class, id);
 	if(a!=null) getSession().delete(a);
     }
