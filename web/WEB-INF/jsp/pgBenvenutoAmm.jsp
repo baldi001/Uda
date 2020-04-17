@@ -18,6 +18,8 @@
             <br>
             <button id="bottone" style="width: 350px;height: 60px;margin-top: 60px;font-size: 20px;border-radius: 30px;border: 1px solid #7b7b7b;" type="button" onclick="window.location.href='verificaAzione1'">Fai verificare azione correttiva</button> 
             <br>
+            <button id="bottone" style="width: 350px;height: 60px;margin-top: 60px;font-size: 20px;border-radius: 30px;border: 1px solid #7b7b7b;" type="button" onclick="window.location.href='listaAzioniC'">Lista Azioni Correttive</button> 
+            <br>
             <button id="bottone" style="width: 350px;height: 60px;margin-top: 60px;font-size: 20px;border-radius: 30px;border: 1px solid #7b7b7b;" type="button" onclick="window.location.href='/Uda/'">Logout</button>
         </div>
     </body>

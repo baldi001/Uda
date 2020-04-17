@@ -166,4 +166,14 @@ public class AppController {
         verazionecorservice.saveVerificaAzioneCorrettiva(a);
         return "pgBenvenutoAmm";
     }
+    @RequestMapping(value = { "/listaAzioniC" }, method = RequestMethod.GET)
+    public String listaAzioniCorrettive(ModelMap model){
+        List<AzioniCorrettive> azioniCorrettive = azionecorservice.findAllAzioni();
+        ArrayList<AzioniCorrettive> listaAzioniFinale = new ArrayList<AzioniCorrettive>();
+        for(AzioniCorrettive a : azioniCorrettive){
+            if(loggeduser.getUsername().equals(a.getSegnalazione().getSettore().getUtente().getUsername()))listaAzioniFinale.add(a);
+        }
+        model.addAttribute("listaAzioniCorrettive", listaAzioniFinale);
+        return "VisualizzaAzioniCorrettive";
+    }
 }
