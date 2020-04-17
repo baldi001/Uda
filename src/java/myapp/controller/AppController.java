@@ -134,7 +134,16 @@ public class AppController {
         this.verazionecorservice.deleteVerificaAzioneCorrettiva(id);
         return "redirect:/checkLogin2";
     }
-    
+    @RequestMapping(value = {"/creazioneAzioneCorrettiva"}, method= RequestMethod.GET)
+    public String CreaAzioneCorrettiva(ModelMap model){
+        model.addAttribute("azionec",new AzioniCorrettive());
+        return "creaAzioneCorrettiva";
+    }
+    @RequestMapping(value = {"/doCreazioneAzione"}, method = RequestMethod.GET)
+    public String doCreazioneAzione(@ModelAttribute("azionec") AzioniCorrettive a , ModelMap model){
+        azionecorservice.saveAzioneCorrettiva(a);
+        return "pgBenvenutoAmm";
+    }
     @RequestMapping(value = {"/goSegnalazione"}, method = RequestMethod.GET)
     public String goSegnalazione(ModelMap model){
         model.addAttribute("segnalazione",new Segnalazioni());

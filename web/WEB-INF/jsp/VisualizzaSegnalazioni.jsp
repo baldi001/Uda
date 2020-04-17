@@ -23,6 +23,7 @@
 			<td>${a.tipo}</td>
                         <td>${a.descrizione}</td>
                         <td>${a.utente.getUsername()}</td>
+                        <td><a href="<c:url value='/creazioneAzioneCorrettiva'/>">Crea Azione Correttiva</a></td>
 		</tr>
 	</c:forEach>
     </table>
